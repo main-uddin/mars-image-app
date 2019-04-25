@@ -4,7 +4,7 @@ const STORE_DATA = new Symbol('STORE_DATA')
 
 function getData(date) {
   return dispatch => {
-    fetch(
+    return fetch(
       `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${API_KEY}`
     )
       .then(r => r.json())
